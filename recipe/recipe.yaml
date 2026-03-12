@@ -1,5 +1,5 @@
 context:
-  version: "0.72.0"
+  version: "0.73.1"
 
 package:
   name: zarf
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/zarf-dev/zarf/archive/v${{ version }}.tar.gz
-  sha256: 8d041e6d70c11c0832ba279628bb88c27d8edaa3d462488fd816284f4e8a68bc
+  sha256: abc0f595604dc85f42ece7938ede694929320571fc2ec60ffe105b7dd5c45513
 
 build:
   number: 0
