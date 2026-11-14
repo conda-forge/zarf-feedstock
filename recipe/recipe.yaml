@@ -1,5 +1,5 @@
 context:
-  version: "0.76.0"
+  version: "1.0.1"
 
 package:
   name: zarf
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/zarf-dev/zarf/archive/v${{ version }}.tar.gz
-  sha256: 1cc34326ebeac78d945dbefe94c900c90a46098ff7b6eab83cbc095201f8b346
+  sha256: eebaa4a5d8b0325f7bc5c76cdabb8f5321ec43a151adfecdb4e2bd90440dfaa3
 
 build:
   number: 0
   script:
-    - go-licenses save . --save_path library_licenses --ignore github.com/alibabacloud-go/cr-20160607 --ignore github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer --ignore github.com/deitch/magic --ignore github.com/in-toto/attestation/go --ignore github.com/in-toto/in-toto-golang 
-      --ignore github.com/xi2/xz
+    - go-licenses save . --save_path library_licenses --ignore github.com/alibabacloud-go/cr-20160607 --ignore github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer --ignore github.com/deitch/magic --ignore github.com/in-toto/attestation/go --ignore github.com/in-toto/in-toto-golang --ignore 
+      github.com/xi2/xz
     - if: unix
       then:
         - go build -v -o $PREFIX/bin/zarf -ldflags="-s -w"
